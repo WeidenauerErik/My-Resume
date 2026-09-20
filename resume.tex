@@ -18,7 +18,10 @@
 \usepackage{fancyhdr}
 \usepackage[english]{babel}
 \usepackage{tabularx}
-\input{glyphtounicode}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
 
 
 %----------FONT OPTIONS----------
@@ -58,7 +61,9 @@
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
-\pdfgentounicode=1
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
 
 %-------------------------
 % Custom commands
@@ -112,10 +117,12 @@
 % \end{tabular*}
 
 \begin{center}
-    \textbf{\Huge \scshape Jake Ryan} \\ \vspace{1pt}
-    \small 123-456-7890 $|$ \href{mailto:x@x.com}{\underline{jake@su.edu}} $|$ 
-    \href{https://linkedin.com/in/...}{\underline{linkedin.com/in/jake}} $|$
-    \href{https://github.com/...}{\underline{github.com/jake}}
+    \textbf{\Huge \scshape Erik Weidenauer} \\ \vspace{1pt}
+    \small +43 664 75596725 $|$ Vienna, Austria $|$ \href{mailto:weidenauer.erik@outlook.com}{\underline{weidenauer.erik@outlook.com}} $|$
+    \href{https://weidenauererik.com}{\underline{weidenauererik.com}} $|$
+    \href{https://linkedin.com/in/erik-weidenauer}{\underline{linkedin.com/in/erik-weidenauer}} $|$
+    \href{https://github.com/WeidenauerErik}{\underline{github.com/WeidenauerErik}} \\ \vspace{1pt}
+    \small \textit{Full-Stack Developer}
 \end{center}
 
 
@@ -123,11 +130,14 @@
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
-      {Southwestern University}{Georgetown, TX}
-      {Bachelor of Arts in Computer Science, Minor in Business}{Aug. 2018 -- May 2021}
-    \resumeSubheading
-      {Blinn College}{Bryan, TX}
-      {Associate's in Liberal Arts}{Aug. 2014 -- May 2018}
+      {HTL Rennweg}{Vienna, Austria}
+      {Information Technology / Grade: 1.8}{Sep 2021 -- Jun 2026}
+      \resumeItemListStart
+        \resumeItem{Full-stack web development: Java / Spring Boot and Symfony (PHP) for backend, Vue.js with Capacitor for cross-platform frontend}
+        \resumeItem{Networking \& cybersecurity: Cisco router/switch configuration, protection against common vulnerabilities (e.g. SQL injection)}
+        \resumeItem{Multimedia \& design: Adobe Creative Suite (Illustrator, Photoshop, InDesign), photography, and film production}
+        \resumeItem{Diploma Thesis: DanceMaster --- cross-platform AR dance-education application (see Projects)}
+      \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 
@@ -136,43 +146,36 @@
   \resumeSubHeadingListStart
 
     \resumeSubheading
-      {Undergraduate Research Assistant}{June 2020 -- Present}
-      {Texas A\&M University}{College Station, TX}
+      {Freelance Software Developer}{Jun 2026 -- Aug 2026}
+      {Self-Employed}{Remote}
       \resumeItemListStart
-        \resumeItem{Developed a REST API using FastAPI and PostgreSQL to store data from learning management systems}
-        \resumeItem{Developed a full-stack web application using Flask, React, PostgreSQL and Docker to analyze GitHub data}
-        \resumeItem{Explored ways to visualize GitHub collaboration in a classroom setting}
+        \resumeItem{Design and build custom software solutions for companies and private clients, automating processes and delivering digital products end-to-end}
+        \resumeItem{Deliver clean, maintainable code across web applications, desktop tools, backend systems, and APIs using PostgreSQL and Doctrine, tailored to each client's requirements}
       \resumeItemListEnd
-      
-% -----------Multiple Positions Heading-----------
-%    \resumeSubSubheading
-%     {Software Engineer I}{Oct 2014 - Sep 2016}
-%     \resumeItemListStart
-%        \resumeItem{Apache Beam}
-%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
-%     \resumeItemListEnd
-%    \resumeSubHeadingListEnd
-%-------------------------------------------
 
     \resumeSubheading
-      {Information Technology Support Specialist}{Sep. 2018 -- Present}
-      {Southwestern University}{Georgetown, TX}
+      {Website Administrator}{Jan 2023 -- Feb 2026}
+      {Naturfreunde \"Osterreich}{Remote}
       \resumeItemListStart
-        \resumeItem{Communicate with managers to set up campus computers used on campus}
-        \resumeItem{Assess and troubleshoot computer problems brought by students, faculty and staff}
-        \resumeItem{Maintain upkeep of computers, classroom equipment, and 200 printers across campus}
-    \resumeItemListEnd
+        \resumeItem{Owned end-to-end administration and maintenance of the official website for the local Neubau group}
+        \resumeItem{Managed content updates and performed regular maintenance to ensure technical stability}
+        \resumeItem{Optimized the CMS-based platform to deliver a reliable, engaging digital presence for the community}
+      \resumeItemListEnd
 
     \resumeSubheading
-      {Artificial Intelligence Research Assistant}{May 2019 -- July 2019}
-      {Southwestern University}{Georgetown, TX}
+      {Network Engineering Intern}{Aug 2024 -- Aug 2024}
+      {CANCOM Austria}{Vienna, Austria (Hybrid)}
       \resumeItemListStart
-        \resumeItem{Explored methods to generate video game dungeons based off of \emph{The Legend of Zelda}}
-        \resumeItem{Developed a game in Java to test the generated dungeons}
-        \resumeItem{Contributed 50K+ lines of code to an established codebase via Git}
-        \resumeItem{Conducted  a human subject study to determine which video game dungeon generation technique is enjoyable}
-        \resumeItem{Wrote an 8-page paper and gave multiple presentations on-campus}
-        \resumeItem{Presented virtually to the World Conference on Computational Intelligence}
+        \resumeItem{Earned the Fortinet NSE 3 certification, deepening expertise in network security concepts and infrastructure}
+        \resumeItem{Engineered Python scripts for network automation, improving operational efficiency and reliability}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Network Engineering Intern}{Aug 2023 -- Aug 2023}
+      {CANCOM Austria}{Vienna, Austria (Hybrid)}
+      \resumeItemListStart
+        \resumeItem{Configured and managed Cisco switches alongside Palo Alto Networks and Fortinet FortiGate firewalls in complex network environments}
+        \resumeItem{Earned Fortinet NSE 1 and NSE 2 certifications, demonstrating strong fundamentals in cybersecurity and threat mitigation}
       \resumeItemListEnd
 
   \resumeSubHeadingListEnd
@@ -182,34 +185,65 @@
 \section{Projects}
     \resumeSubHeadingListStart
       \resumeProjectHeading
-          {\textbf{Gitlytics} $|$ \emph{Python, Flask, React, PostgreSQL, Docker}}{June 2020 -- Present}
+          {\textbf{DanceMaster --- Diploma Thesis} $|$ \emph{Unity, PostgreSQL, Symfony, JWT, Docker}}{Jul 2025 -- Present}
           \resumeItemListStart
-            \resumeItem{Developed a full-stack web application using with Flask serving a REST API with React as the frontend}
-            \resumeItem{Implemented GitHub OAuth to get data from user’s repositories}
-            \resumeItem{Visualized GitHub data to show collaboration}
-            \resumeItem{Used Celery and Redis for asynchronous tasks}
+            \resumeItem{Built a cross-platform AR mobile app in Unity 6 (iOS/Android) with AR Foundation, ARKit, and ARCore for real-time spatial tracking and interactive foot-tracking animations}
+            \resumeItem{Engineered a Symfony REST API with JWT authentication as the orchestration layer for user data and choreography sync; containerized with Docker}
           \resumeItemListEnd
       \resumeProjectHeading
-          {\textbf{Simple Paintball} $|$ \emph{Spigot API, Java, Maven, TravisCI, Git}}{May 2018 -- May 2020}
+          {\textbf{Heatseekers} $|$ \emph{Python, OpenCV, Flask, Vue.js, SCSS, Bash}}{Oct 2023 -- Feb 2024}
           \resumeItemListStart
-            \resumeItem{Developed a Minecraft server plugin to entertain kids during free time for a previous job}
-            \resumeItem{Published plugin to websites gaining 2K+ downloads and an average 4.5/5-star review}
-            \resumeItem{Implemented continuous delivery using TravisCI to build the plugin upon new a release}
-            \resumeItem{Collaborated with Minecraft server administrators to suggest features and get feedback about the plugin}
+            \resumeItem{Built a Python / OpenCV background service for real-time motion and thermal detection from live camera feeds using low-overhead frame-differencing}
+            \resumeItem{Developed a Flask REST API and Vue.js/SCSS dashboard for live video streams and detection logs; automated headless deployment with Bash scripting}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{TaskMaster --- Centralized Class Task Manager} $|$ \emph{Spring Boot, Vue.js, Thymeleaf}}{Apr 2022 -- Sept 2022}
+          \resumeItemListStart
+            \resumeItem{Built a Spring Boot backend with role-based access control separating teacher and student workflows}
+            \resumeItem{Combined a Vue.js frontend with Thymeleaf server-side templating for dynamic, secure task tracking}
           \resumeItemListEnd
     \resumeSubHeadingListEnd
 
 
+%-----------CERTIFICATES-----------
+\section{Certificates}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Career Essentials in Generative AI --- Microsoft \& LinkedIn, Jul 2026 \\
+     Career Essentials in GitHub Professional Certificate --- GitHub, Jul 2026 \\
+     Artificial Intelligence Fundamentals --- IBM, Jul 2026 \\
+     Introduction to Responsible AI --- Google, Jul 2026 \\
+     Amazon Translate: Getting Started --- AWS, Feb 2026 \\
+     Amazon Location Service: Getting Started --- AWS, Feb 2026 \\
+     SkillDisplay Profile (Symfony, Spring Boot, VueJs, Drupal) --- SkillDisplay GmbH, Jun 2026 \\
+     Drupal in a Day --- Drupal, Oct 2025 \\
+     Communication and Team Building Seminar --- HTL Rennweg, Mar 2025 \\
+     NSE 1, NSE 2, NSE 3 --- Fortinet, 2023 -- 2024
+    }}
+ \end{itemize}
 
-%
+
+%-----------AWARDS-----------
+\section{Awards}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     World Champion 2025 --- Vaulting (Squad) --- FEI, Aug 2025 \\
+     8th in the World 2025 --- Vaulting (Individual) --- FEI, Jul 2025 \\
+     8th in Europe 2024 --- Vaulting (Individual) --- FEI, Jul 2024 \\
+     12th in the World 2023 --- Vaulting (Individual) --- FEI, Jul 2023
+    }}
+ \end{itemize}
+
+
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: Java, Python, C/C++, SQL (Postgres), JavaScript, HTML/CSS, R} \\
-     \textbf{Frameworks}{: React, Node.js, Flask, JUnit, WordPress, Material-UI, FastAPI} \\
-     \textbf{Developer Tools}{: Git, Docker, TravisCI, Google Cloud Platform, VS Code, Visual Studio, PyCharm, IntelliJ, Eclipse} \\
-     \textbf{Libraries}{: pandas, NumPy, Matplotlib}
+     \textbf{Programming}{: Vue.js, Spring Boot, Symfony, Java, PHP, Python, C} \\
+     \textbf{CMS}{: WordPress, Typo3, Drupal} \\
+     \textbf{Design \& Modeling}{: Blender, Illustrator, Photoshop, InDesign} \\
+     \textbf{Cybersecurity \& Network Technology}{: Cisco Networking, Fortinet, Palo Alto Networks} \\
+     \textbf{Tools}{: Git / GitHub, Docker / DockerHub, JetBrains Products, VSCode}
     }}
  \end{itemize}
 
