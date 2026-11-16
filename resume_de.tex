@@ -1,0 +1,255 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[ngerman]{babel}
+\usepackage{tabularx}
+\usepackage{iftex}
+\ifPDFTeX
+  \input{glyphtounicode}
+\fi
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\ifPDFTeX
+  \pdfgentounicode=1
+\fi
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge \scshape Erik Weidenauer} \\ \vspace{1pt}
+    \small +43 664 75596725 $|$ Wien, \"Osterreich $|$ \href{mailto:weidenauer.erik@outlook.com}{\underline{weidenauer.erik@outlook.com}} $|$
+    \href{https://weidenauererik.com}{\underline{weidenauererik.com}} $|$
+    \href{https://linkedin.com/in/erik-weidenauer}{\underline{linkedin.com/in/erik-weidenauer}} $|$
+    \href{https://github.com/WeidenauerErik}{\underline{github.com/WeidenauerErik}} \\ \vspace{1pt}
+    \small \textit{Full-Stack Entwickler}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Ausbildung}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {HTL Rennweg}{Wien, \"Osterreich}
+      {Informationstechnologie / Note: 1,8}{Sep 2021 -- Jun 2026}
+      \resumeItemListStart
+        \resumeItem{Full-Stack-Webentwicklung: Java / Spring Boot und Symfony (PHP) f\"ur das Backend, Vue.js mit Capacitor f\"ur plattform\"ubergreifende Frontends}
+        \resumeItem{Netzwerktechnik \& Cybersecurity: Konfiguration von Cisco-Routern/-Switches, Schutz vor g\"angigen Schwachstellen (z.\,B. SQL-Injection)}
+        \resumeItem{Multimedia \& Design: Adobe Creative Suite (Illustrator, Photoshop, InDesign), Fotografie und Filmproduktion}
+        \resumeItem{Diplomarbeit: DanceMaster --- plattform\"ubergreifende AR-Tanz-Lernapplikation (siehe Projekte)}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Berufserfahrung}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {\"Osterreichisches Bundesheer}{Okt 2026 -- Heute}
+      {Grundwehrdienst}{\"Osterreich}
+      \resumeItemListStart
+        \resumeItem{T\"atig als Leistungssportler (Voltigieren) im Heeresleistungssportzentrum des \"Osterreichischen Bundesheeres, Nov 2026 -- Heute (Hybrid)}
+        \resumeItem{Grundwehrdienst absolviert, Okt 2026 (Vor Ort)}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Freiberuflicher Softwareentwickler}{Jun 2026 -- Aug 2026}
+      {Selbstst\"andig}{Remote}
+      \resumeItemListStart
+        \resumeItem{Entwicklung ma{\ss}geschneiderter Softwarel\"osungen f\"ur Unternehmen und Privatkunden, Automatisierung von Prozessen und End-to-End-Lieferung digitaler Produkte}
+        \resumeItem{Umsetzung von sauberem, wartbarem Code in Webanwendungen, Desktop-Tools, Backend-Systemen und APIs mit PostgreSQL und Doctrine, abgestimmt auf die Anforderungen jedes Kunden}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Website-Administrator}{Jan 2023 -- Feb 2026}
+      {Naturfreunde \"Osterreich}{Remote}
+      \resumeItemListStart
+        \resumeItem{Eigenverantwortliche Administration und Wartung der offiziellen Website der Ortsgruppe Neubau}
+        \resumeItem{Verwaltung von Content-Updates und regelm\"a{\ss}ige Wartung zur Sicherstellung der technischen Stabilit\"at}
+        \resumeItem{Optimierung der CMS-basierten Plattform f\"ur eine zuverl\"assige, ansprechende digitale Pr\"asenz der Community}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Praktikant Netzwerktechnik}{Aug 2024 -- Aug 2024}
+      {CANCOM Austria}{Wien, \"Osterreich (Hybrid)}
+      \resumeItemListStart
+        \resumeItem{Fortinet-NSE-3-Zertifizierung erworben und Fachwissen im Bereich Netzwerksicherheit und Infrastruktur vertieft}
+        \resumeItem{Entwicklung von Python-Skripten zur Netzwerkautomatisierung zur Verbesserung von Effizienz und Zuverl\"assigkeit}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Praktikant Netzwerktechnik}{Aug 2023 -- Aug 2023}
+      {CANCOM Austria}{Wien, \"Osterreich (Hybrid)}
+      \resumeItemListStart
+        \resumeItem{Konfiguration und Verwaltung von Cisco-Switches sowie Palo-Alto-Networks- und Fortinet-FortiGate-Firewalls in komplexen Netzwerkumgebungen}
+        \resumeItem{Fortinet-NSE-1- und NSE-2-Zertifizierungen erworben, fundierte Grundlagen in Cybersecurity und Bedrohungsabwehr nachgewiesen}
+      \resumeItemListEnd
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------
+\section{Projekte}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{DanceMaster --- Diplomarbeit} $|$ \emph{Unity, PostgreSQL, Symfony, JWT, Docker}}{Jul 2025 -- Heute}
+          \resumeItemListStart
+            \resumeItem{Plattform\"ubergreifende AR-Mobile-App in Unity 6 (iOS/Android) mit AR Foundation, ARKit und ARCore f\"ur Echtzeit-Spatial-Tracking und interaktive Fu{\ss}verfolgungs-Animationen entwickelt}
+            \resumeItem{Symfony-REST-API mit JWT-Authentifizierung als Orchestrierungsschicht f\"ur Nutzerdaten und Choreografie-Synchronisation entwickelt; mit Docker containerisiert}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Heatseekers} $|$ \emph{Python, OpenCV, Flask, Vue.js, SCSS, Bash}}{Okt 2023 -- Feb 2024}
+          \resumeItemListStart
+            \resumeItem{Python/OpenCV-Hintergrunddienst f\"ur Echtzeit-Bewegungs- und W\"armeerkennung aus Live-Kamerastreams mittels ressourcenschonender Frame-Differenzierung entwickelt}
+            \resumeItem{Flask-REST-API und Vue.js/SCSS-Dashboard f\"ur Live-Videostreams und Erkennungsprotokolle entwickelt; Headless-Deployment mit Bash-Skripten automatisiert}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{TaskMaster --- Zentraler Klassen-Aufgabenmanager} $|$ \emph{Spring Boot, Vue.js, Thymeleaf}}{Apr 2022 -- Sept 2022}
+          \resumeItemListStart
+            \resumeItem{Spring-Boot-Backend mit rollenbasierter Zugriffskontrolle zur Trennung von Lehrer- und Sch\"uler-Workflows entwickelt}
+            \resumeItem{Vue.js-Frontend mit serverseitigem Thymeleaf-Templating f\"ur dynamisches, sicheres Aufgaben-Tracking kombiniert}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+
+%-----------CERTIFICATES-----------
+\section{Zertifikate}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Career Essentials in Generative AI --- Microsoft \& LinkedIn, Jul 2026 \\
+     Career Essentials in GitHub Professional Certificate --- GitHub, Jul 2026 \\
+     Artificial Intelligence Fundamentals --- IBM, Jul 2026 \\
+     Introduction to Responsible AI --- Google, Jul 2026 \\
+     Amazon Translate: Getting Started --- AWS, Feb 2026 \\
+     Amazon Location Service: Getting Started --- AWS, Feb 2026 \\
+     SkillDisplay Profile (Symfony, Spring Boot, VueJs, Drupal) --- SkillDisplay GmbH, Jun 2026 \\
+     Drupal in a Day --- Drupal, Okt 2025 \\
+     Communication and Team Building Seminar --- HTL Rennweg, M\"arz 2025 \\
+     NSE 1, NSE 2, NSE 3 --- Fortinet, 2023 -- 2024
+    }}
+ \end{itemize}
+
+
+%-----------AWARDS-----------
+\section{Auszeichnungen}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     Weltmeister 2025 --- Voltigieren (Gruppe) --- FEI, Aug 2025 \\
+     8. Platz Weltmeisterschaft 2025 --- Voltigieren (Einzel) --- FEI, Jul 2025 \\
+     8. Platz Europameisterschaft 2024 --- Voltigieren (Einzel) --- FEI, Jul 2024 \\
+     12. Platz Weltmeisterschaft 2023 --- Voltigieren (Einzel) --- FEI, Jul 2023
+    }}
+ \end{itemize}
+
+
+%-----------PROGRAMMING SKILLS-----------
+\section{Technische F\"ahigkeiten}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Programmierung}{: Vue.js, Spring Boot, Symfony, Java, PHP, Python, C} \\
+     \textbf{CMS}{: WordPress, Typo3, Drupal} \\
+     \textbf{Design \& Modellierung}{: Blender, Illustrator, Photoshop, InDesign} \\
+     \textbf{Cybersecurity \& Netzwerktechnik}{: Cisco Networking, Fortinet, Palo Alto Networks} \\
+     \textbf{Tools}{: Git / GitHub, Docker / DockerHub, JetBrains-Produkte, VSCode}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
